@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from users.views import create_user_view
+from cardb.views import base_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', base_view, name='main-page-view'),
     path('create_user/', create_user_view, name='create-user-view'),
 ]

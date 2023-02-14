@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block content %}
 
 
 {% if user.is_superuser %}
@@ -9,3 +10,4 @@
 {% else %}
     <h2>Insufficient permissions</h2>
 {% endif %}
+{% endblock %}
