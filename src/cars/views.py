@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from cars.models import Car
+from cars.models import Car, labels
 
 # Create your views here.
 def all_cars_view(request):
@@ -10,5 +10,5 @@ def create_car_view(request):
     fields = []
     for field in Car._meta.get_fields():
         fields.append(field.name)
-    context = {"fields":fields, }
+    context = {"fields": fields, "labels": labels}
     return render(request, "create_car.html", context)
