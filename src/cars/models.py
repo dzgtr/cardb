@@ -11,9 +11,9 @@ class Car(models.Model):
     additional_model_info = models.CharField(max_length=100)
 
     #engine info
-    displacement = models.DecimalField(max_digits=10, decimal_places=2, validators=MinValueValidator(1))
+    displacement = models.DecimalField(max_digits=10, decimal_places=2)
     # engine type
-    power = models.IntegerField(validators=MinValueValidator(0))
+    power = models.IntegerField()
     #dimensions etc
 
 
