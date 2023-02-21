@@ -5,9 +5,13 @@
 {% if user.is_superuser %}
   	<form action="." method="post">{% csrf_token %}
         <h3>Create user:</h3>
-        <label for="id_username">Username:</label>
+        <label for="id_username">Username:</label> Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
         <input type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required id="id_username">
-        <label for="id_password1">Password:</label>
+        <label for="id_password1">Password:</label>GENERATE
+            Your password can’t be too similar to your other personal information.
+            Your password must contain at least 8 characters.
+            Your password can’t be a commonly used password.
+            Your password can’t be entirely numeric.
         <input type="password" name="password1" autocomplete="new-password" required id="id_password1">
         <label for="id_password2">Password confirmation:</label>
         <input type="password" name="password2" autocomplete="new-password" required id="id_password2">

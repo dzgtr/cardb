@@ -19,8 +19,8 @@ class Car(models.Model):
 
     #suspension info
 
-labels = {"brand": "Car brand (Subaru)",
-          "model": "Model (Impreza)",
-          "additional_model_info": "Additional names (WRX STI)",
-          "displacement": "Engine Displacement",
-          "power": "Engine Power"}
+labels = {"brand": ["Car brand", "(Subaru)", True],
+          "model": ["Model", "(Impreza)", True],
+          "additional_model_info": ["Additional names", "(WRX STI)", False],
+          "displacement": ["Engine Displacement", "in cm3", True],
+          "power": ["Engine Power", "in HP", True]}

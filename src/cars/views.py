@@ -7,6 +7,10 @@ def all_cars_view(request):
     return render(request, "all_cars.html", context)
 
 def create_car_view(request):
+    if request.method == "POST":
+        pass
+
+
     fields = []
     for field in Car._meta.get_fields():
         fields.append(field.name)
