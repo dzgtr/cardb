@@ -19,6 +19,9 @@ class Car(models.Model):
 
     #suspension info
 
+    added_by = models.CharField(max_length=150)
+    points = models.IntegerField(default=0)
+
 labels = {"brand": ["Car brand", "(Subaru)", True],
           "model": ["Model", "(Impreza)", True],
           "additional_model_info": ["Additional names", "(WRX STI)", False],
