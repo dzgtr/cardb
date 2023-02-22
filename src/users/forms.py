@@ -1,19 +1,13 @@
-from django.shortcuts import render
-from django.contrib.auth.forms import UserCreationForm
-import secrets
+from django.contrib.auth.models import User
+from django.forms import ModelForm
+from users.models import Profile
 
-def register(request):
-    if request.POST == 'POST':
-        form = UserCreationForm()
-        if form.is_valid():
-            form.save()
-    else:
-        form = UserCreationForm()
+class UserForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email')
 
-    context = {
-        'form': form
-    }
-    return render(request, 'create_user.html', context)
-
-def generate_password():
-    return secrets.token_urlsafe(20)
+class ProfileForm(ModelForm):
+    class Meta:
+        model = Profile
+        fields = ('url', 'location', 'company')

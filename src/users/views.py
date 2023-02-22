@@ -14,4 +14,5 @@ def create_user_view(request):
     context = {"form": form}
     return render(request, "create_user.html", context)
 
-
+def generate_password():
+    return secrets.token_urlsafe(20)
