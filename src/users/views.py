@@ -5,14 +5,15 @@ import secrets
 
 # Create your views here.
 def create_user_view(request):
+    form = UserCreationForm()
+    pform = ProfileForm()
+
     if request.method == "POST":
         form = UserCreationForm(request.POST)
-        if form.is_valid():
+        if form.is_valid() and pform.is_valid():
             form.save()
+            pform.save()
             return redirect("create-user-view")
-    else:
-        form = UserCreationForm()
-        pform = ProfileForm()
 
     context = {"form": form, "pform": pform}
     return render(request, "create_user.html", context)

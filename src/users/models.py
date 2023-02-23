@@ -2,12 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-
+from django.utils.timezone import now
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     points = models.IntegerField(default=0)
-    location = models.CharField(max_length=30, blank=True, null=True)
-    birth_date = models.DateField(null=True, blank=True)
+    location = models.CharField(max_length=30, blank=True)
+    birth_date = models.DateField(blank=True, default=now)
 
 
 @receiver(post_save, sender=User)
