@@ -15,7 +15,10 @@
             <p>Your password can’t be entirely numeric.</p>
         <p><label for="id_password2">Password confirmation:</label>
         <input type="password" name="password2" autocomplete="new-password" required id="id_password2"></p>
-        {{ pform.as_p }}
+        <p><label for="id_location">Location:</label>
+        <input type="text" name="location" maxlength="30" id="id_location"></p>
+        <p><label for="id_birth_date">Birth date:</label>
+        <input type="date" name="birth_date" min="1910-01-01" max="2052-12-31" id="id_birth_date">
         <button type="submit">Register</button>
     </form>
 
