@@ -1,14 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
-
-
+{% load static %}
+{% block scripts %}
+<script src="{% static '/js/pwd_gen.js' %}"></script>
+{% endblock %}
 {% if user.is_superuser %}
   	<form action="." method="post">{% csrf_token %}
         <h3>Create user:</h3>
         <p><label for="id_username">Username:</label></p>
         <p><input type="text" name="username" maxlength="150" autocapitalize="none" autocomplete="username" autofocus required id="id_username"></p>
         <p>150 characters or fewer. Letters, digits and @/./+/-/_ only.</p>
-        <p><label for="id_password1">Password:</label><input type="password" name="password1" autocomplete="new-password" required id="id_password1">GENERATE</p>
+        <p><label for="id_password1">Password:</label><input type="password" name="password1" autocomplete="new-password" required id="id_password1">
+            <button onclick=pwd_generator()>GENERATE</button></p>
+            <p><input type="checkbox" onclick="show_pwd()">Show Password</p>
             <p>Your password can’t be too similar to your other personal information.</p>
             <p>Your password must contain at least 8 characters.</p>
             <p>Your password can’t be a commonly used password.</p>
