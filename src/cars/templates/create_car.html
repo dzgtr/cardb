@@ -3,10 +3,19 @@
 
 <form method="post">
     <table>
+        {{ form.as_p }}
     {% for key, value in labels.items %}
         <tr>
             <td style="text-align: right">{{ value }}</td>
             <td><input name="{{ key }}"></td>
+            <script>
+                function required() {
+                    if ("{{ value.2 }}" == "True") {
+                        document.getElementById("{{ key }}").required = true;
+                    }
+                }
+                required();
+            </script>
         </tr>
     {% endfor %}
     </table>
