@@ -7,7 +7,6 @@ function pwd_generator() {
         var rnum = Math.floor(Math.random() * chars.length);
         randomstring += chars.substring(rnum,rnum+1);
     }
-    console.log(randomstring);
     document.getElementById('id_password1').value = randomstring;
 }
 

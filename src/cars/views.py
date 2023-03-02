@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from cars.models import Car, labels
+from cars.forms import CarCreateForm
 
 # Create your views here.
 def all_cars_view(request):
@@ -9,10 +10,7 @@ def all_cars_view(request):
 def create_car_view(request):
     if request.method == "POST":
         pass
+    form = CarCreateForm(request.POST)
 
-
-    fields = []
-    for field in Car._meta.get_fields():
-        fields.append(field.name)
-    context = {"fields": fields, "labels": labels}
+    context = {"form": form, "labels": labels}
     return render(request, "create_car.html", context)

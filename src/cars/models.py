@@ -7,7 +7,7 @@ class EngineType(models.Model):
 class Car(models.Model):
     #car basic info
     brand = models.CharField(max_length=50)
-    model = models.CharField(max_length=50)
+    carmodel = models.CharField(max_length=50)
     additional_model_info = models.CharField(max_length=100)
 
     #engine info
