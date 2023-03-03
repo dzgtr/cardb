@@ -22,8 +22,15 @@ class Car(models.Model):
     added_by = models.CharField(max_length=150)
     points = models.IntegerField(default=0)
 
-labels = {"brand": ["Car brand", "(Subaru)", True],
-          "model": ["Model", "(Impreza)", True],
-          "additional_model_info": ["Additional names", "(WRX STI)", False],
-          "displacement": ["Engine Displacement", "in cm3", True],
-          "power": ["Engine Power", "in HP", True]}
+class Label():
+    def __init__(self, name, tooltip, required=False):
+        self.name = name
+        self.tooltip = tooltip
+        self.required = required
+
+
+labels = {"brand": Label("Car brand", "(Subaru)", True),
+          "model": Label("Model", "(Impreza)", True),
+          "additional_model_info": Label("Additional names", "(WRX STI)"),
+          "displacement": Label("Engine Displacement", "in cm3", True),
+          "power": Label("Engine Power", "in HP", True)}

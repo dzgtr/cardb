@@ -11,6 +11,9 @@ def create_car_view(request):
     if request.method == "POST":
         pass
     form = CarCreateForm(request.POST)
+    labelsdict = {}
+    for key, value in labels.items():
+        labelsdict[key] = [labels[key].name, labels[key].tooltip, labels[key].required]
 
-    context = {"form": form, "labels": labels}
+    context = {"form": form, "labels": labelsdict}
     return render(request, "create_car.html", context)
