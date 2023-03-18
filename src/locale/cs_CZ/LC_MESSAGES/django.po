@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-18 14:03+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: cars/templates/create_car.html:23
+msgid "Submit"
+msgstr ""
+
+#: users/templates/create_user.html:9
+msgid "Create user:"
+msgstr ""
+
+#: users/templates/create_user.html:10
+msgid "Username:"
+msgstr ""
+
+#: users/templates/create_user.html:12
+msgid "150 characters or fewer. Letters, digits and @/./+/-/_ only"
+msgstr ""
+
+#: users/templates/create_user.html:13
+msgid "Password:"
+msgstr ""
+
+#: users/templates/create_user.html:14
+msgid "GENERATE"
+msgstr ""
+
+#: users/templates/create_user.html:15
+msgid "Show Password"
+msgstr ""
+
+#: users/templates/create_user.html:16
+msgid "Your password can’t be too similar to your other personal information."
+msgstr ""
+
+#: users/templates/create_user.html:17
+msgid "Your password must contain at least 8 characters."
+msgstr ""
+
+#: users/templates/create_user.html:18
+msgid "Your password can’t be a commonly used password."
+msgstr ""
+
+#: users/templates/create_user.html:19
+msgid "Your password can’t be entirely numeric."
+msgstr ""
+
+#: users/templates/create_user.html:20
+msgid "Password confirmation:"
+msgstr ""
+
+#: users/templates/create_user.html:22
+msgid "Location:"
+msgstr ""
+
+#: users/templates/create_user.html:24
+msgid "Birth date:"
+msgstr ""
+
+#: users/templates/create_user.html:26
+msgid "Register"
+msgstr ""
+
+#: users/templates/create_user.html:30
+msgid "Insufficient permissions"
+msgstr ""

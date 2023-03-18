@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% load i18n %}
 
 <form method="post">
     <table>
@@ -19,6 +20,6 @@
         </tr>
     {% endfor %}
     </table>
-    <button type="submit" name="submit">Submit</button>
+    <button type="submit" name="submit">{% trans "Submit" %}</button>
 {% endblock %}
 </form>
