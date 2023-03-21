@@ -4,6 +4,9 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 class EngineType(models.Model):
     pass
 
+class TransmissionType(models.Model):
+    pass
+
 class Car(models.Model):
     #car basic info
     brand = models.CharField(max_length=50)
@@ -29,8 +32,17 @@ class Label():
         self.required = required
 
 
-labels = {"brand": Label("Car brand", "(Subaru)", True),
-          "model": Label("Model", "(Impreza)", True),
-          "additional_model_info": Label("Additional names", "(WRX STI)"),
-          "displacement": Label("Engine Displacement", "in cm3", True),
-          "power": Label("Engine Power", "in HP", True)}
+labels = {
+    "Description":{
+                "brand": Label("Car brand", "(Subaru)", True),
+                "model": Label("Model", "(Impreza)", True),
+                "additional_model_info": Label("Additional names", "(WRX STI)")},
+    "Engine": {
+              "displacement": Label("Engine Displacement", "in cm3", True),
+              "power": Label("Engine Power", "in HP", True)},
+    "Dimensions": {
+                "length": Label("Length", "in mm"),
+                "width": Label("Width", "in mm"),
+                "height": Label("Height", "in mm"),
+                "wheelbase": Label("Wheelbase", "in mm")
+    }}
